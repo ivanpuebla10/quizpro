@@ -65,7 +65,7 @@ getQuestionsAsync().then(data => {
         cargarPuntuacion()
         graficaIni.style.display = "none"
         const respuestas = data[PantallaActual].desordenado
-        referencia.innerHTML = `<p>${data[PantallaActual].questions}</p>`
+        referencia.innerHTML = `<div class="question_title"><p>${data[PantallaActual].questions}</p><div>`
         respuestas.forEach((elem, index) => {
             referencia.innerHTML += `<div class = cuestionario>
                                         <p class = elemento>
@@ -229,8 +229,8 @@ const pantallaPrincipal = () => {
     boton.style.display = "block"
     puntua.style.display = "none"
     graficaFinal.style.display = "none"
-    boton.innerText = "Empezar Juego"
-    referencia.innerHTML = `<p> Hola esto es el contenido inicial </p>`
+    boton.innerText = "Take the Quiz"
+    referencia.innerHTML = `<div id = "inicio"> <p> ¡Welcome to the quiz! </p><div>`
     cargarLocalStorageYPintarGrafica()
 }
 
@@ -246,8 +246,8 @@ const pantallaFinal = () => {
     cargarGrafica()
     boton.style.display = "none"
     puntua.style.display = "none"
-    referencia.innerHTML = `<p>Esta es la pantalla final</p>
-                            <button onclick = "volverEmpezar()">Volver a empezar</button> 
+    referencia.innerHTML = `<p>Aqui van tus resultados!</p>
+                            <button id = "avanzar" onclick = "volverEmpezar()">Volver a empezar</button> 
                            `
     guardarLocalStorage()
 }

@@ -1,4 +1,127 @@
-.ct-chart, .ct-chart2 {
-    height: 400px;
-    width: 400px;
+* {
+    margin: 0;
+    padding: 0;
 }
+
+
+body {
+    display: flex;
+    font-family: sans-serif;
+    background: rgb(200, 229, 247);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-weight: 600;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow: hidden;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+    height: 40%;
+    background-color: white;
+    border-radius: 5px;
+    font-size: auto;
+    margin: 5px;
+    
+}
+
+.cuestionario {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.elemento {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: rgb(224, 100, 100);
+    width: 95%;
+    height: 30px;
+}
+
+.question_title {
+    text-align: center;
+}
+
+#puntuacion {
+    margin:20px;
+
+}
+
+input {
+    margin: 5px;
+}
+
+#avanzar {
+    background: rgb(81, 81, 241);
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    height: 15%;
+    width: 100px;  
+    margin: 20px;
+}
+
+.ct-chart, .ct-chart2 {
+    height: 50%;
+    width: 90%;
+    margin: 20px;
+    background: white;
+    border-radius: 5px;
+
+}
+
+.inicio {
+    height: 100%;
+}
+
+@media only screen and (min-width: 680px) {
+   body {
+       margin: 0;
+       padding: 0;
+   }
+
+   #container {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    flex-direction: row;
+    margin: 10px 0;
+    height: 80%;
+   }
+
+   .question_title {
+       width: 100%;
+   }
+
+   .cuestionario {
+       display: flex;
+       flex-direction: column;
+       flex-wrap: wrap;
+       align-items: center;
+       align-content: center;
+       width: 40%;
+       height: 20%;
+    }
+
+   .elemento {
+       height: 100%;
+   }
+
+   input {
+       margin: 5px;
+   }
+}
+
