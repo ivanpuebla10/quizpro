@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,9 +7,11 @@
 
 
 body {
+    background-image: url('/images/af97ef7c607be9bf58423121b4c7fc44.jpg');
+    color:white;
     display: flex;
     font-family: sans-serif;
-    background: rgb(200, 229, 247);
+    /* background: rgb(200, 229, 247); */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,12 +28,13 @@ body {
     align-items: center;
     justify-content: space-around;
     width: 90%;
-    height: 40%;
+    height: 80%;
     background-color: white;
     border-radius: 5px;
     font-size: auto;
     margin: 5px;
     max-width: 860px;
+    background-color:rgba(0, 0, 0, 0);
     
 }
 
@@ -42,13 +47,22 @@ body {
     
 }
 
+#inicio > p {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+}
+
+.question_title > p {
+    font-size: 25px;
+}
+
 .elemento {
     display:flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     border-radius: 5px;
-    background-color: rgb(224, 100, 100);
+    /* background-color: rgb(224, 100, 100); */
     width: 95%;
     height: 100%;
 }
@@ -74,6 +88,7 @@ input {
     height: 15%;
     width: 100px;  
     margin: 20px;
+    font-size: 20px;
 }
 
 .ct-chart, .ct-chart2 {
@@ -83,6 +98,7 @@ input {
     background: white;
     border-radius: 5px;
     max-width: 860px;
+    opacity: 0.8;
 
 }
 
@@ -109,6 +125,20 @@ input {
        width: 100%;
    }
 
+   #avanzar {
+       display:flex;
+       text-align: center;
+       align-items: center;
+       justify-content: center;
+       align-content: center;
+       width: 30%;
+       max-width: 296px;
+       margin: 5px;
+       padding: 10px;
+       height: 10%;
+       
+   }
+
    .cuestionario {
        display: flex;
        flex-direction: column;
@@ -127,4 +157,5 @@ input {
        margin: 5px;
    }
 }
+
 

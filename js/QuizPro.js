@@ -72,11 +72,29 @@ getQuestionsAsync().then(data => {
                                             <label for="${index}">${elem}</label>
                                             <input id="${index}" type="radio" name="bloqueQuiz" value="${elem}">
                                         </p>
-                                     </div>`
+                                     </div>`           
         })
-        
+        const op1 = document.getElementById("0");
+        const op2 = document.getElementById("1");
+        const op3 = document.getElementById("2");
+        const op4 = document.getElementById("3");
 
-        boton.innerText = "Avance"
+        const arrOpc = [op1, op2, op3, op4]
+
+        for(let i = 0; i < arrOpc.length; i++) {
+        if (i === 0) {
+          arrOpc[i].parentElement.style.background = "rgb(224, 100, 100)"
+        }
+        else if (i === 1) {
+          arrOpc[i].parentElement.style.background = "rgb(49, 116, 155)"
+        }
+        else if (i === 2) {
+          arrOpc[i].parentElement.style.background = "rgb(89, 170, 89)"
+        }
+        else {arrOpc[i].parentElement.style.background = "rgb(230, 230, 88)"}
+        }
+
+        boton.innerText = "Next"
     }
 })
 
@@ -238,7 +256,7 @@ pantallaPrincipal()
 
 const cargarPuntuacion = () => {
     puntua.style.display = "block"
-    puntua.innerHTML = `Tienes estos puntos: ${puntuacion}`
+    puntua.innerHTML = `Score: ${puntuacion}`
 }
 
 const pantallaFinal = () => { 
@@ -246,8 +264,8 @@ const pantallaFinal = () => {
     cargarGrafica()
     boton.style.display = "none"
     puntua.style.display = "none"
-    referencia.innerHTML = `<p>Aqui van tus resultados!</p>
-                            <button id = "avanzar" onclick = "volverEmpezar()">Volver a empezar</button> 
+    referencia.innerHTML = `<p>Final Score: ${puntuacion} </p>
+                            <button id = "avanzar" onclick = "volverEmpezar()">Start Over</button> 
                            `
     guardarLocalStorage()
 }
