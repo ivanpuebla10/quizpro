@@ -51,7 +51,7 @@ getQuestionsAsync().then(data => {
 
     const elegirCorrecta = () => {
         const ref = document.querySelectorAll('input[name="bloqueQuiz"]');
-        console.log(data)
+        // console.log(data)
         ref.forEach(valor => {
             if (valor.checked) {
                 if (data[PantallaActual - 1].correctAnswers === valor.value) {
@@ -67,35 +67,16 @@ getQuestionsAsync().then(data => {
         const respuestas = data[PantallaActual].desordenado
         referencia.innerHTML = `<div class="question_title"><p>${data[PantallaActual].questions}</p><div>`
         respuestas.forEach((elem, index) => {
-            referencia.innerHTML += `<div class = cuestionario>
+            referencia.innerHTML += `<div class = "cuestionario${index}">
                                         <p class = elemento>
                                             <label for="${index}">${elem}</label>
                                             <input id="${index}" type="radio" name="bloqueQuiz" value="${elem}">
                                         </p>
                                      </div>`           
         })
-        const op1 = document.getElementById("0");
-        const op2 = document.getElementById("1");
-        const op3 = document.getElementById("2");
-        const op4 = document.getElementById("3");
-
-        const arrOpc = [op1, op2, op3, op4]
-
-        for(let i = 0; i < arrOpc.length; i++) {
-        if (i === 0) {
-          arrOpc[i].parentElement.style.background = "rgb(224, 100, 100)"
-        }
-        else if (i === 1) {
-          arrOpc[i].parentElement.style.background = "rgb(49, 116, 155)"
-        }
-        else if (i === 2) {
-          arrOpc[i].parentElement.style.background = "rgb(89, 170, 89)"
-        }
-        else {arrOpc[i].parentElement.style.background = "rgb(230, 230, 88)"}
         }
 
         boton.innerText = "Next"
-    }
 })
 
 let PantallaActual = 0;
@@ -264,7 +245,7 @@ const pantallaFinal = () => {
     cargarGrafica()
     boton.style.display = "none"
     puntua.style.display = "none"
-    referencia.innerHTML = `<p>Final Score: ${puntuacion} </p>
+    referencia.innerHTML = `<p>Final Score: ${puntuacion}/5 </p>
                             <button id = "avanzar" onclick = "volverEmpezar()">Start Over</button> 
                            `
     guardarLocalStorage()
