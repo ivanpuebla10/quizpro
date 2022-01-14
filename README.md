@@ -11,7 +11,8 @@ You only need an internet navigator to run the page.
 ### HOW TO PLAY 🔧
 Ones in the page(accesed by link) just click on "Start Quiz" and the Quiz will iniciate. Select and opcion and click on "Next". There are 5 questions and the final page will show you your final score and a graphic. To take the quiz one more time just press "Start Over". You will see your record in a graphic located in the first page.
 
-#### Preview
+### Preview
+#### For desktop: 
 
 First screen:
 
@@ -24,6 +25,22 @@ Random question:
 Final screen:
 
 ![foto](./images/pantallafinal.jpg) 
+
+#### For mobile phones:
+
+First screen:
+
+![foto](./images/pantallainicialp.jpg) 
+
+Random question: 
+
+![foto](./images/preguntap.jpg) 
+
+Final screen:
+
+![foto](./images/pantallafinalp.jpg) 
+
+
 
 
 ## Author ✒️
